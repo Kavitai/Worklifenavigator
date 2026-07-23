@@ -1,0 +1,34 @@
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <img src="/assets/logo.svg" alt="Kavita Khanna" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="nav-logo-text" style="display:none;">Kavita Khanna</span>
+    </a>
+
+    <div class="nav-links" id="navLinks">
+
+      <div class="nav-dropdown{% if page.url.startsWith('/consulting/') or page.url.startsWith('/facilitation/') or page.url.startsWith('/fractional-cpo/') %} active{% endif %}">
+        <button class="nav-dropdown-toggle" aria-expanded="false">Navigating Complexity?<span class="nav-caret">▾</span></button>
+        <div class="nav-dropdown-menu">
+          <a href="/consulting/">Facing a high-stakes call</a>
+          <a href="/fractional-cpo/">Scoping a people leader hire</a>
+          <a href="/facilitation/">Building team capability</a>
+        </div>
+      </div>
+
+      <a href="/coaching/"{% if page.url.startsWith('/coaching/') %} class="active"{% endif %}>Seeking skills?</a>
+
+      <a href="/keynote/"{% if page.url.startsWith('/keynote/') %} class="active"{% endif %}>Need a speaker?</a>
+
+      <a href="/powerskills/"{% if page.url.startsWith('/powerskills/') %} class="active"{% endif %}>Powerskills</a>
+
+      <a href="/podcast/"{% if page.url.startsWith('/podcast/') %} class="active"{% endif %}>Podcast</a>
+
+      <a href="{{ ctaHref or '/#contact' }}" class="nav-cta">{{ ctaLabel or 'Book a Session' }}</a>
+    </div>
+
+    <button class="nav-mobile-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
