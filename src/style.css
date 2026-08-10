@@ -1234,6 +1234,11 @@ p {
 
 /* ---- Mobile nav (dropdowns become an inline accordion) ---- */
 @media (max-width: 768px) {
+  .nav-name-text,
+  .nav-name-divider {
+    display: none;
+  }
+
   .nav-links {
     display: none;
   }
