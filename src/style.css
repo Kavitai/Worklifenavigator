@@ -225,7 +225,7 @@ p {
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--primary);
+  background: #fff;
   margin: 5px 0;
   transition: var(--transition);
 }
@@ -1117,6 +1117,10 @@ p {
 
 /* ---- Responsive ---- */
 @media (max-width: 1024px) {
+   .nav-name-text,
+  .nav-name-divider {
+    display: none;
+  }
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .video-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1234,10 +1238,7 @@ p {
 
 /* ---- Mobile nav (dropdowns become an inline accordion) ---- */
 @media (max-width: 768px) {
-  .nav-name-text,
-  .nav-name-divider {
-    display: none;
-  }
+ 
 
   .nav-links {
     display: none;
